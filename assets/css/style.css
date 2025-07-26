@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --error-bg: #f8d7da;
+    --error-color: #721c24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #7f8c8d;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #bdc3c7;
+    margin-bottom: 40px;
+}
+
+.form-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.message {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: none; /* Escondido por padrão */
+}
+
+.error {
+    background-color: var(--error-bg);
+    color: var(--error-color);
+    border: 1px solid var(--error-bg);
+}
+
+/* ========================================= */
+/*            ESTILOS DO CARROSSEL           */
+/* ========================================= */
+
+.swiper-container {
+  width: 60%;
+  height: 450px; /* Ajuste esta altura conforme o seu gosto */
+  margin: 0 auto 40px;/* Centralizamos e mantemos a margem inferior*/
+  margin-bottom: 40px; /* Espaço entre o carrossel e a galeria de produtos */
+  border-radius: 8px; /* Bordas arredondadas como os outros cards */
+  background-color: #eee; /* Cor de fundo enquanto a imagem carrega */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #000; /* Fundo preto que adicionamos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Para a imagem caber inteira */
+}
+/* Personalizando as cores das setas e das bolinhas para combinar com seu site */
+:root {
+    --swiper-theme-color: var(--secondary-color); /* Usa a cor secundária que você já definiu */
+    --swiper-navigation-size: 30px; /* Tamanho das setas */
+}
+@media (max-width: 768px) {
+  .swiper-container {
+    width: 100%; /* Faz o carrossel ocupar toda a largura em ecrãs pequenos */
+  }
+}

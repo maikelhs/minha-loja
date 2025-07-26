@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Premium Masculina</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Moda Masculina Premium</h1>
+        <h4 class="subtitle">Confiança que se veste. Estilo que se nota.</h4>
+
+         <!-- Início do Carrossel -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides do Carrossel -->
+                <div class="swiper-slide"><img src="assets/imagens/moletom-canguru.jpg" alt="Moletom Canguru em destaque"></div>
+                <div class="swiper-slide"><img src="assets/imagens/calca-moletom.jpg" alt="Calça de Moletom em destaque"></div>
+                <div class="swiper-slide"><img src="assets/imagens/moletom-careca.jpg" alt="Moletom Careca em destaque"></div>
+                <div class="swiper-slide"><img src="assets/imagens/camiseta.jpg" alt="Camiseta em destaque"></div>
+            </div>
+            <!-- Paginação (as bolinhas) -->
+            <div class="swiper-pagination"></div>
+            <!-- Setas de Navegação -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+         <!-- Fim do Carrossel -->
+
+        <!-- Galeria de Produtos -->
+        <div class="product-gallery">
+            <div class="product-card">
+                <img src="assets/imagens/moletom-canguru.jpg" alt="Moletons Cangurus">
+                <h2>Moletom Canguru</h2>
+                <p>Nos dias frios, seu refúgio é um moletom premium.</p>
+                <span class="price">R$ 169,90</span>
+            </div>
+            <div class="product-card">
+                <img src="assets/imagens/calca-moletom.jpg" alt="Calças em Moletom">
+                <h2>Calças em Moletom</h2>
+                <p>Vista o moletom que transforma frio em sensação de cuidado.</p>
+                <span class="price">R$ 119,90</span>
+            </div>
+            <div class="product-card">
+                <img src="assets/imagens/moletom-careca.jpg" alt="Moletons Carecas">
+                <h2>Moletons Careca</h2>
+                <p>Mais que roupa — é aconchego em cada detalhe.</p>
+                <span class="price">R$ 129,90</span>
+            </div>
+            <div class="product-card">
+                <img src="assets/imagens/camiseta.jpg" alt="Camisetas">
+                <h2>Camisetas</h2>
+                <p>Para quem escolhe vestir conforto com atitude..</p>
+                <span class="price">R$ 90,90</span>
+            </div>
+            
+
+        </div>
+<p class="subtitle">Imagens ilustrativas, verifique modelos e tamanhos disponiveis.</p>
+        <hr>
+
+        <!-- Formulário de Qualificação -->
+        <div class="form-container">
+            <h2>Quero Comprar!</h2>
+            <form id="qualifyForm">
+                <label for="tamanho">1. Escolha o tamanho:</label>
+                <select id="tamanho" name="tamanho" required>
+                    <option value="">Selecione...</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                    <option value="G1">G1</option>
+                    <option value="G2">G2</option>
+                    <option value="G4">G4</option>
+                </select>
+
+                <label for="cidade">2. Qual a sua cidade?</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Ex: Porto Alegre" required>
+
+                <label for="entrega">3. Como prefere receber?</label>
+                <select id="entrega" name="entrega" required>
+                    <option value="">Selecione...</option>
+                    <option value="Retirar no local">Retirar no local</option>
+                    <option value="Tele-entrega">Tele-entrega</option>
+                </select>
+
+                <button type="submit">Verificar e Falar no WhatsApp</button>
+            </form>
+            
+            <!-- Mensagens de feedback (inicialmente escondidas) -->
+            <div id="errorMessage" class="message error"></div>
+        </div>
+    </main>
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
